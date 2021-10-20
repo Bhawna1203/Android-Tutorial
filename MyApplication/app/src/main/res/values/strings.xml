@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="textview">TextView</string>
+    <string name="happy_birthday_bhawna">Happy Birthday Bhawna</string>
+    <string name="from_bhawna">From Bhawna</string>
+    <string name="todo">TODO</string>
+</resources>
