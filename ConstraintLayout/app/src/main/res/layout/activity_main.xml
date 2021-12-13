@@ -8,36 +8,39 @@
     tools:layout_editor_absoluteX="36dp"
     tools:layout_editor_absoluteY="-77dp">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="odp"
-        android:layout_height="42dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="-52dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="246dp"
-        tools:layout_editor_absoluteY="-55dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName4"
+    <Button
+        android:id="@+id/button15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.646"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="287dp" />
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="56dp"
+        android:text="Button"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginStart="16dp"
+        android:text="Button"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        tools:layout_editor_absoluteY="236dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="360dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="42dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
