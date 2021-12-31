@@ -1,19 +1,21 @@
 package com.example.notification
 
-import android.app.Notification
-import android.app.NotificationChannel
-import android.app.NotificationManager
+import android.app.*
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 
 class MainActivity : AppCompatActivity() {
 
     val CHANNEL_ID = "channelID"
     val CHANNEL_NAME = "channelName"
+    val NOTIFICAION_ID = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,10 +23,26 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         createNotificationChannel()
 
+        val intent = Intent(this,MainActivity::class.java)
+        val pendingIntent = TaskStackBuilder.create(this).run{
+            addNextIntentWithParentStack(intent)
+            getPendingIntent(0,PendingIntent.FLAG_UPDATE_CURRENT)
+        }
+
         val notification = NotificationCompat.Builder(this,CHANNEL_ID)
-            .setContentTitle("Awesome Notification")
-            .setContentText("This is the content text")
-            .setSmallIcon(R.drawable.ic_star)
+            .setContentTitle("Awesome Notification friend")
+            .setContentText("Hope you work great ,i am missing you shifa")
+            .setSmallIcon(R.drawable.ic_star_foreground)
+            .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .setContentIntent(pendingIntent)
+            .build()
+
+        val notificationManager = NotificationManagerCompat.from(this)
+
+        val btnShowNotification = findViewById<Button>(R.id.btnShowNotification)
+        btnShowNotification.setOnClickListener{
+            notificationManager.notify(NOTIFICAION_ID,notification)
+        }
     }
 
     fun createNotificationChannel(){
@@ -40,3 +58,4 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
