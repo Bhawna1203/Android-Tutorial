@@ -147,13 +147,49 @@ fun main(){
 
     }
 
-    var x :Any = 13.37
+    var x :Any = 13.37f
     when(x){
         is Int -> println("\n $x is an Int")
-        is Double -> print("\n $x is a Double")
+        !is Double -> print("\n $x is a Double")
         is String -> print("\n $x is a String")
         else -> print("\n $x is not in one of the above")
     }
+
+    print("\n-------------- Now we are looking into loop statement -------------\n")
+    var hey:Int = 1
+    //while loop first
+    while(hey <= 10){
+        print("$hey\n")
+        hey++
+    }
+    print("While loop is done\n")
+    //printing 1009998 ---
+    var n:Int = 100
+    while(n>=0){
+        print("$n")
+        n-=2;
+    }
+    print("\nNow print all the numbers\n")
+
+    print("\n-----------DO WHILE LOOP-----------\n")
+    var e:Int =15
+    do{
+        print("$e")
+        e++;
+    }while(e<=10)
+    print("\n Do while loop is done")
+
+
+    var feltTemp = "cold"
+    var roomTemp = 10
+    while(feltTemp == "cold"){
+        roomTemp++;
+        if(roomTemp >= 20){
+            feltTemp = "comfy"
+            println("\n It id comfy now")
+        }
+    }
+
 
 
 
