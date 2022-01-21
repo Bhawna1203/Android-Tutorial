@@ -1,5 +1,5 @@
 package com.example.MyApplication
-
+/*
 fun main(){
     val myName = "Bhawna"
     //myName = "franchise"
@@ -189,6 +189,38 @@ fun main(){
             println("\n It id comfy now")
         }
     }
+
+
+    print("\n----------- Now For loop --------------\n")
+    for(num in 1..10){
+        print(" $num")
+    }
+    print("\n")
+    for(i in 1 until 10){  //in this last variable is not included
+        print(" $i")
+    }
+    print("\n")
+    for(i in 10 downTo 1 step 2){
+        print(" $i")
+    }
+*/
+fun main() {
+    print("\n------------ Learning Function ---------\n")
+    myFunction()
+    myFunction()
+    var result: Int
+    //argument
+    result = addUp(2,3)
+    print("\n $result")
+}
+//Method is a function within a Class
+//parameter
+fun addUp(a:Int,b:Int) :Int{
+     return a+b
+}
+
+fun myFunction(){
+    print("\n Have a great day cutie!!!")
 
 
 
