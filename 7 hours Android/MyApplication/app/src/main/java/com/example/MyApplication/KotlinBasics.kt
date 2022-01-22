@@ -1,4 +1,7 @@
 package com.example.MyApplication
+
+import kotlin.io.print as print1
+
 /*
 fun main(){
     val myName = "Bhawna"
@@ -204,6 +207,7 @@ fun main(){
         print(" $i")
     }
 */
+/*
 fun main() {
     print("\n------------ Learning Function ---------\n")
     myFunction()
@@ -212,24 +216,60 @@ fun main() {
     //argument
     result = addUp(2,3)
     print("\n $result")
+
+    print("\n------------ Divide ----------------\n")
+    var result1:Double
+    result1 = average(2.3,4)
+    print("\n $result1")
 }
 //Method is a function within a Class
 //parameter
 fun addUp(a:Int,b:Int) :Int{
      return a+b
 }
+fun average(a:Double,b:Int): Double {
+    return (a+b)/2;
+}
 
 fun myFunction(){
     print("\n Have a great day cutie!!!")
+}
+ */
 
+/*fun main(){
+    print1("\n --------------- Learning Nullable ----------------- \n")
+    var name :String = "Denis"
+  //  name = null -> Compilation error
 
+    var nullableName : String? = "Bhawna"
+    //nullableName = null
 
+    var len = name.length
+    var len2 = nullableName?.length
+    nullableName?.let { println(it.length) }
+/*
+    THis works in the same way like this peace of code
+    if(nullableName != null){
+         var len2 = nullableName.length
+    }
+    else{
+       null
+    }
+    */
+}
+*/
 
+fun main(){
+    println("\n ---------------- This one is for Nullables and the elvis operator --------------- \n")
+    var nullableName : String? = "Bhawna"
+    var len2 = nullableName?.length
+    nullableName?.let { println(it.length) }
 
+    //?: Elvis operator
+    val name = nullableName ?: "Guest"
+   // println("name is $name")
 
-
-
-
+    println(nullableName!!.toLowerCase())
 
 
 }
