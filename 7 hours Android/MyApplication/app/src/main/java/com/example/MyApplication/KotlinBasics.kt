@@ -1,5 +1,7 @@
 package com.example.MyApplication
 
+import android.app.backup.BackupAgent
+import java.lang.IllegalArgumentException
 import kotlin.io.print as print1
 
 /*
@@ -258,7 +260,7 @@ fun myFunction(){
     */
 }
 */
-
+/*
 fun main(){
     println("\n ---------------- This one is for Nullables and the elvis operator --------------- \n")
     var nullableName : String? = "Bhawna"
@@ -273,4 +275,147 @@ fun main(){
 
 
 }
+ */
+
+/*
+fun main(){
+    println("\n-------------------- Learning Classes and object ---------------------")
+    var bhawna =Person("Bhawna")
+    var mayank=Person()
+    var bhumika=Person(lastName = "Chodhary")
+
+}
+
+class Person(firstName: String = "John", lastName: String = "Chauhan"){
+
+    //Initializer Block
+    init {
+        println(" Initialized a new person object with " +
+                "firstName = $firstName and lastName = $lastName")
+    }
+}
+*/
+/*
+fun main(){
+    kotlin.io.print("\n --------------------Learning scope of a parameter--------------------- \n")
+    myFunction(5)
+
+}
+fun myFunction(a:Int){ //here 'a'  is a variable
+    var a = 4 //here 'a' is a parameter
+    println("a is $a")
+}
+ */
+/*
+fun main(){
+    println("\n-------------------- Learning Member Variables and properties ---------------------")
+    var bhawna =Person("Bhawna","Chauhan,19")
+    var mayank=Person()
+    var bhumika=Person(lastName = "Chodhary")
+
+    kotlin.io.print("\n--------------Here using member variables-------------\n")
+    bhawna.age = 19
+    println("\nbHAWNA IS ${bhawna.age} years old\n")
+    bhawna.stateHobby()
+    kotlin.io.print("\n")
+    bhawna.hobby="SkateBoard"
+    bhawna.stateHobby()
+
+    kotlin.io.print("\n")
+    mayank.hobby = "Play video games"
+    mayank.stateHobby()
+
+}
+
+class Person(firstName: String = "John", lastName: String = "Chauhan"){
+     //Member Variables - Properties
+    var age :Int ? = null
+    var hobby :String = "watch Netflix"
+    //Initializer Block
+    init {
+        println(" Initialized a new person object with " +
+                "firstName = $firstName and lastName = $lastName")
+    }
+    //member secondary Constructor
+    constructor(firstName: String,lastName: String,age :Int)
+              :this(firstName,lastName){
+          this.age = 13
+
+    }
+
+    //Member functions -Methods
+    fun stateHobby(){
+        kotlin.io.print("My hobby is $hobby")
+    }
+}
+*/
+/*
+fun main(){
+    kotlin.io.print("\n------------------- Learning Lateinit,getter and setter ----------------\n")
+    var myCar = Car()
+    myCar.owner
+    myCar.myBrand
+    kotlin.io.print("brand is : ${myCar.myBrand}")
+    println("\nMaxspeed is ${myCar.maxSpeed}")
+
+    println("\n Model is ${myCar.myModel}")
+
+}
+class Car(){
+    lateinit var owner: String
+    val myBrand: String = "BMW"
+        //custom getter
+    get(){
+        return field.toLowerCase()
+    }
+    var maxSpeed:Int = 250
+        get() = field
+        set(value){
+            field = if(value > 0) value else throw IllegalArgumentException("Value can't be less than 0")
+        }
+
+    var myModel:String = "MS"
+          private set
+    init {
+        this.myModel = "M3"
+        this.owner = "Bhawna"
+    }
+}
+*/
+/*
+//Data class must have one data member otherwise it gives an error
+data class User(val id:Long,var name:String)
+fun main(){
+    println("\n----------------- About Data Class -----------------\n")
+    val user1 = User(1,"Bhawna")
+    val name = user1.name
+    println(name)
+    user1.name = "Mayank chauhan"
+
+
+    val user2 = User(2,"Bhumika chauhan")
+    println(user1.equals(user2))
+
+    println("User Datails: $user1")
+
+    val updatedUser = user1.copy(name="Denis panjuta")
+    println(user1)
+    println(updatedUser)
+
+    println(" First data is ${updatedUser.component1()}") //print first argument
+    println("Second data is ${updatedUser.component2()}")//print second argument
+
+    val(id) = updatedUser
+    println("id is ${id}")
+
+}
+ */
+
+//Inheritance
+//The class that inferits the features id another class
+//is called the sub class or chils class or
+//derived class,and the class whose features are
+//inherited ia called the super class or parent class or
+//Base class
+
 
