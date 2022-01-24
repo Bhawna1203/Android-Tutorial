@@ -411,11 +411,138 @@ fun main(){
 }
  */
 
+/*
+fun main(){
+    println("\n ---------------- Here we are learning Inheritance --------------- \n")
+    var audiA3 = Car("A3","Audi")
+    var teslaS = ElectricCar("S-Model","Tesla",85.0)
+
+    var obj1:Any
+    teslaS.extendRange(50.5)
+    audiA3.drive(200.0)
+    teslaS.drive(200.0)
+    teslaS.drive()
+
+}
 //Inheritance
 //The class that inferits the features id another class
 //is called the sub class or chils class or
 //derived class,and the class whose features are
 //inherited ia called the super class or parent class or
 //Base class
+
+//super class ,parebt child,base class
+open class Car(val name:String,val brand:String){ //we use use to make its properties inherit by others
+       //properties
+       //methods
+
+    open var range: Double = 0.0
+     fun extendRange(amount:Double){
+         if(amount > 0){
+             range += amount
+         }
+     }
+     open fun drive(distance: Double){
+        println("Drove for $distance km")
+    }
+
+}
+//sub class child class or derived class of vehicle
+class ElectricCar(name:String, branc:String,batteryLife:Double)
+    :Car(name,branc){
+
+        override var range = batteryLife * 6
+
+
+        override fun drive(distance: Double){
+            println("Drove for $range km on electricity")
+        }
+
+        fun drive(){
+            println("Rove for $range km on electricity")
+        }
+
+
+
+    }
+
+ */
+/*
+interface Drivable{
+
+    abstract var chargeType: String
+    val maxSpeed: Double
+    fun drive(): String
+    fun brake(){
+        println("The drivable is braking")
+    }
+}
+
+open class Car(override val maxSpeed: Double,
+               val name:String, val brand:String, override var chargeType: String
+): Drivable{ //we use use to make its properties inherit by others
+    //properties
+    //methods
+
+    open var range: Double = 0.0
+    fun extendRange(amount:Double){
+        if(amount > 0){
+            range += amount
+        }
+    }
+
+    override fun drive(): String {
+        return "Driving the interface drive"
+    }
+    open fun drive(distance: Double){
+        println("Drove for $distance km")
+    }
+
+}
+class ElectricCar(maxSpeed: Double,name:String, branc:String,batteryLife:Double)
+    :Car(maxSpeed,name,brand = "hey",chargeType = "hello"){
+
+    override var range = batteryLife * 6
+
+
+    override fun drive(distance: Double){
+        println("Drove for $range km on electricity")
+    }
+
+    override fun drive(): String{
+        return "Rove for $range km on electricity"
+    }
+
+    override fun brake() {
+        super.brake()
+        println("brake nside of electric car")
+    }
+
+
+
+}
+fun main(){
+    println("\n ---------------- Here we are learning interfaces --------------- \n")
+    var audiA3 = Car(200.0,"A3","Audi","WhatsApp")
+    var teslaS = ElectricCar(250.0,"S-Model","Tesla",85.0)
+
+
+    teslaS.extendRange(50.5)
+
+  //  audiA3.drive(200.0)
+    teslaS.brake()
+    audiA3.brake()
+
+    audiA3.drive(200.0)
+    teslaS.drive(200.0)
+
+
+}
+
+ */
+
+
+
+
 
 
