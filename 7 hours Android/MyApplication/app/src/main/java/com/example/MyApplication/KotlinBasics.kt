@@ -540,6 +540,65 @@ fun main(){
 }
 
  */
+/*
+An abstract class cannot be instantiated you cannot create object of an abstract class
+homeever you can inherit subclasses from an an=bstract class. The memebers (properties and methods)
+of an abstract class are non abstract unless you explicitly use the abstract keyword to makethem abstract
+ */
+abstract class mammal(private val name:String,private val origin: String,private val weight: Double){
+    //abstract property(must be overridden by subclass
+    abstract var maxSpeed: Double
+    //abstract methods (must be implemented by subclasses)
+    abstract fun run()
+    abstract fun breath()
+
+    fun displayDetails(){
+        println("Name : $name, Origin: $origin, Weight: $weight," + "Max speed: $maxSpeed")
+    }
+}
+
+class Human(name:String, origin: String, weight: Double,
+            override var maxSpeed: Double):mammal(name,origin, weight){
+
+                override fun run(){
+                    //code to run
+                    println("Run on two legs")
+                }
+
+                 override fun breath() {
+                     //code to breath
+                     println("Breath through mouth or nose")
+                }
+
+            }
+
+class Elephant(name: String,origin: String,weight: Double,
+               override var maxSpeed: Double):mammal(name,origin,weight){
+
+    override fun run() {
+        //code to run
+        println("Runs on four legs")
+    }
+
+    override fun breath() {
+        println("Breath through the trunk")
+    }
+
+}
+fun main(){
+    println("\n-------------For abstract Classes-------------\n")
+    val human = Human("Dennis","Russia",70.0,28.0)
+    val elephant = Elephant("Rosy","India",5400.0,25.0)
+  //  val mammal = mammal("Dennis","Russia",70.0,28.0)
+
+
+    human.run()
+    elephant.run()
+
+    human.breath()
+    elephant.breath()
+}
+
 
 
 

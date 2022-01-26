@@ -4,6 +4,7 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/A10Dance" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Calculator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SwipingViewPager" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/k/TikTokSwipe" vcs="Git" />
   </component>
 </project>
