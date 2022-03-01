@@ -559,7 +559,7 @@ abstract class mammal(private val name:String,private val origin: String,private
 
 class Human(name:String, origin: String, weight: Double,
             override var maxSpeed: Double):mammal(name,origin, weight){
-
+ //here learn inheritance so that do something good
                 override fun run(){
                     //code to run
                     println("Run on two legs")
