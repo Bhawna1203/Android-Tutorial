@@ -217,5 +217,109 @@ fun main(){
 /*
 i will do this tomorrow
  */
+//In this i am working with while loop
+/*
+fun main(){
+ var x = 1
+ while(x <=10){
+  print("$x")
+  x++
+ }
+ print("\nWhile loop is done")
+}
 */
+/*
+//Question to print from 100 to 0 in a reverse direction
+fun main(){
+ var x = 100
+ while(x >= 0){
+  print("$x ")
+  x-= 2
+ }
+
+}
+
  */
+
+/*
+//Now learning do-while(loop)
+fun main(){
+ var x = 1
+ do{
+  //print("$x ")
+  x++
+ }while(x<=10)
+// println("\nDo-while loop is done")
+
+}
+ */
+/*
+fun main(){
+    var feltTemp = "cold"
+    var roomTemp = 10
+    while(feltTemp == "cold"){
+        roomTemp++
+        if(roomTemp >= 20){
+            feltTemp = "comfy"
+            println("It's comfy now")
+        }
+    }
+}
+*/
+/*
+fun main(){
+    for(num in 1..10){
+        print("$num ")
+    }
+    print("\n")
+    for(i in 1 until 10){ //for(i in 1.until(10))
+        print("$i ")
+    }
+    print("\n")
+    for(i in 10 downTo  1){
+        print("$i ")
+    }
+    print("\n")
+    //for dcreasing order and different step
+    for(i in 20 downTo 1 step 3){
+        print("$i ")
+    }
+    //we can write above one as like that for(i in 20.downTo(1).step(3))
+
+}
+
+ */
+
+/*
+fun main(){
+    for(i in 0 until 10000){
+        if(i == 9001){
+            print("It's over 90000")
+        }
+    }
+}
+
+fun main(){
+    var HumidityLevel = 80;
+    var humidity:String = "humid"
+    for(humidityLevel in 80 downTo 60){
+        if(humidity == "humid"){
+            HumidityLevel -= 5
+            humidity = "humidity decreased"
+        }
+
+    }
+    print("iT'S COMFY NOW")
+
+
+
+}
+
+
+
+
+
+
+
+
+
