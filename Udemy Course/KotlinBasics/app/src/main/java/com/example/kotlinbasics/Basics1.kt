@@ -314,6 +314,87 @@ fun main(){
 
 
 }
+ */
+/*
+fun main(){
+    //Now learning break and continue statement
+    for(i in 1..20){
+
+        if(i/2 == 5){
+            //break
+            continue
+        }
+        print("$i ")
+
+    }
+    print("Done with the loop")
+}
+
+ */
+
+/*
+fun main(){
+    //myFunction()
+   // myFunction()
+    var result = addUp(3,4) //Here 3,4 are arguments
+    print("result is $result")
+    var result2 = Avg(3.56,782.45)
+    print("\nAverage Result is $result2")
+
+}
+//Method - a function inside a class is called method
+fun addUp(a:Int,b:Int) :Int{
+    return a+b
+
+}
+fun myFunction(){
+    print("Called from myFunction")
+}
+fun Avg(a:Double,b:Double):Double{
+    return (a+b)/2
+}
+
+ */
+/*
+fun main(){
+    var name :String = "Denis"
+    //  name = null -> Compilation error
+    var nullableName : String? = "Bhawna"
+    //nullableName = null
+
+    var len = name.length
+    var len2 = nullableName?.length
+    nullableName?.let { println(it.length) }
+/*
+    THis works in the same way like this peace of code
+    if(nullableName != null){
+         var len2 = nullableName.length
+    }
+    else{
+       null
+    }
+    */
+}
+
+ */
+fun main(){
+    println("\n ---------------- This one is for Nullables and the elvis operator --------------- \n")
+    var nullableName : String? = "Bhawna"
+    var len2 = nullableName?.length
+    nullableName?.let { println(it.length) }
+
+    //?: Elvis operator
+    val name = nullableName ?: "Guest"
+    // println("name is $name")
+
+    println(nullableName!!.toLowerCase())
+}
+
+
+
+
+
+
 
 
 
