@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Udemy Course.iml" filepath="$PROJECT_DIR$/.idea/Udemy Course.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Oops_Basics.iml" filepath="$PROJECT_DIR$/.idea/modules/Oops_Basics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Oops_Basics.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Oops_Basics.app.iml" />
     </modules>
   </component>
 </project>
