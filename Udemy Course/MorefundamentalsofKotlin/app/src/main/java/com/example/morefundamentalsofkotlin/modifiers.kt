@@ -1,6 +1,7 @@
 package com.example.morefundamentalsofkotlin
 
 //Syntax of Public Modifier
+/*
 public class Example{
 
 }
@@ -11,14 +12,18 @@ public fun hello()
 fun demo()
 public val x=12
 val y =10
-
+*/
 //Syntax Private Modifers
+/*
 internal class Example{
     internal val x =1
     internal fun doSomething(){
 
     }
 }
+
+ */
+/*
 internal val y = 10
 //In the class Example ,val x and function doSomething() are declared as private .
 //The class "Example" is accessible from the same source file, "val x" and "fun doSomething()"
@@ -42,3 +47,5 @@ class Another : Base(){
     }
     override val i =10
 }
+
+ */
