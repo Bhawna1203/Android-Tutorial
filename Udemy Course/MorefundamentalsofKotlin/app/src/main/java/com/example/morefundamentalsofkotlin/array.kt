@@ -51,6 +51,8 @@ fun main(){
 
     val mix = arrayOf("Sunday","Monday",23,67,"hey",45.67)
     println(mix.contentToString())
+    
+    //FINALLY LEARNING MORE AND MORE 
 
 }
 
