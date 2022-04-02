@@ -2,6 +2,11 @@ package com.example.kotlinbasics
 /*
 fun main(){
     //Now learning datatype
+    /*
+    If you want to jump into the code directly then you can use this TDDO statement for the same
+    */
+    //TODO: Add new functionality
+
     //string type
     var myName = "DENIS"
     //type int 32 bits
@@ -85,6 +90,8 @@ fun main(){
  */
 /*
 fun main(){
+        //TODO : comparison  test
+
     //Now Comparison Operators(==, != , < ,> , <= , >=)
     println("is 5 is equal to 5 ${5 == 5}")
     println("is 5 is notEqual to 5 ${5 != 5}")
