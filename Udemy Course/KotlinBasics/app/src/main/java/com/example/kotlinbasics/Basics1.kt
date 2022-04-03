@@ -55,6 +55,7 @@ fun main(){
  */
 
 /*
+//TODO: Learning String interpolation
 //String Interpolation
 fun main(){
     val myStr = "Hello World"
@@ -68,6 +69,7 @@ fun main(){
 
 /*
 
+//TODO: About Operators in Kotlin
 fun main(){
     //Arithmatic operators(+,-,*,/,%)
 
@@ -161,6 +163,7 @@ fun main(){
 
  */
 /*
+//TODO: About Conditional Statement
 fun main(){
     // Control Flows
     // If Statements
@@ -287,7 +290,7 @@ fun main(){
         print("$i ")
     }
     print("\n")
-    //for dcreasing order and different step
+    //for decreasing order and different step
     for(i in 20 downTo 1 step 3){
         print("$i ")
     }
@@ -384,6 +387,7 @@ fun main(){
 }
 
  */
+//TODO: Here we learn about nullables
 fun main(){
     println("\n ---------------- This one is for Nullables and the elvis operator --------------- \n")
     var nullableName : String? = "Bhawna"
