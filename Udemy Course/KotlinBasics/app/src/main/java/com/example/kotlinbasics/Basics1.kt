@@ -367,6 +367,8 @@ fun Avg(a:Double,b:Double):Double{
  */
 /*
 fun main(){
+
+    TODO : Read about nullables
     var name :String = "Denis"
     //  name = null -> Compilation error
     var nullableName : String? = "Bhawna"
