@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
             //Launch Custom Dialog
             customDialogFunction()
         }
-
+//
         /**
          * Here we have handled onClick of Custom Progress Dialog Button.
          */
