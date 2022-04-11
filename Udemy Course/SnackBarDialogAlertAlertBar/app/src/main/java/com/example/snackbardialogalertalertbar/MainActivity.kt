@@ -38,6 +38,24 @@ class MainActivity : AppCompatActivity() {
             //Launch Alert Dialog
             alertDialogFunction()
         }
+        /**
+         * Here we have handled onClick of Custom Dialog Button.
+         */
+        val btnCustomDialog:Button = findViewById(R.id.btn_custom_dialog)
+        btnCustomDialog.setOnClickListener {
+            //Launch Custom Dialog
+            customDialogFunction()
+        }
+
+        /**
+         * Here we have handled onClick of Custom Progress Dialog Button.
+         */
+        val btnCustomProgress:Button = findViewById(R.id. btn_custom_progress_dialog)
+        btnCustomProgress.setOnClickListener {
+
+            //Launch Custom Progress Dialog
+            customProgressDialogFunction()
+        }
     }
 
     /**
@@ -77,14 +95,7 @@ class MainActivity : AppCompatActivity() {
         alertDialog.show()  // show the dialog to UI
 
 
-        /**
-         * Here we have handled onClick of Custom Dialog Button.
-         */
-        val btnCustomDialog:Button = findViewById(R.id.btn_custom_dialog)
-        btnCustomDialog.setOnClickListener {
-            //Launch Custom Dialog
-            customDialogFunction()
-        }
+
     }
     /**
      * Method is used to show the Custom Dialog.
@@ -104,6 +115,18 @@ class MainActivity : AppCompatActivity() {
         }
         //Start the dialog and display it on screen.
         customDialog.show()
+    }
+    /**
+     * Method is used to show the Custom Progress Dialog.
+     */
+    private fun customProgressDialogFunction() {
+        val customProgressDialog = Dialog(this)
+        /*Set the screen content from a layout resource.
+        The resource will be inflated, adding all top-level views to the screen.*/
+        customProgressDialog.setContentView(R.layout.dialog_custom_progress)
+
+        //Start the dialog and display it on screen.
+        customProgressDialog.show()
     }
 
 

@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="app/src/main/res/layout/dialog_custom.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/dialog_custom_progress.xml" value="0.13849646821392533" />
       </map>
     </option>
   </component>
