@@ -7,8 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.roomdatabasedemo.databinding.ItemsRowBinding
 
 class ItemAdapter(private val items:ArrayList<EmployeeEntity>,
-                //  private val updateListener:(id:Int)->Unit,
-                //  private val deleteListener:(id:Int)->Unit
+                  private val updateListener:(id:Int)->Unit,
+                  private val deleteListener:(id:Int)->Unit
 ) :RecyclerView.Adapter<ItemAdapter.ViewHolder>(){
 
 
@@ -43,10 +43,10 @@ class ItemAdapter(private val items:ArrayList<EmployeeEntity>,
         //Here using onClick Functionality
 
         holder.ivEdit.setOnClickListener{
-    //        updateListener.invoke(item.id)
+            updateListener.invoke(item.id)
         }
         holder.ivDelete.setOnClickListener{
-    //        deleteListener.invoke(item.id)
+            deleteListener.invoke(item.id)
         }
 
     }
