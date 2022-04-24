@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.roomdatabasedemo.databinding.ActivityMainBinding
 import com.example.roomdatabasedemo.databinding.DialogUpdateBinding
 import kotlinx.coroutines.InternalCoroutinesApi
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +27,13 @@ class MainActivity : AppCompatActivity() {
         val employeeDao = (application as EmployeeApp).db.employeeDao()
         binding?.btnAdd?.setOnClickListener{
            addRecord(employeeDao)
+        }
+
+        lifecycleScope.launch{
+            employeeDao.fetchAllEmployee().collect {
+                val list = ArrayList(it)
+                setupListOfDataIntoRecyclerView(list,employeeDao)
+            }
         }
 
 
@@ -48,6 +56,21 @@ class MainActivity : AppCompatActivity() {
                 "Name or email cannt be Blank",
                 Toast.LENGTH_LONG
             ).show()
+        }
+    }
+
+    private fun setupListOfDataIntoRecyclerView(employeeList:ArrayList<EmployeeEntity>,
+    employeeDao: EmployeeDao){
+        if(employeeList.isNotEmpty()){
+            val itemAdapter = ItemAdapter(employeeList
+            )
+            binding?.rvItemsList?.layoutManager = LinearLayoutManager(this)
+            binding?.rvItemsList?.adapter = itemAdapter
+            binding?.rvItemsList?.visibility = View.VISIBLE
+            binding?.tvNoRecordsAvailable?.visibility = View.GONE
+        }else{
+            binding?.rvItemsList?.visibility = View.GONE
+            binding?.tvNoRecordsAvailable?.visibility = View.VISIBLE
         }
     }
 
