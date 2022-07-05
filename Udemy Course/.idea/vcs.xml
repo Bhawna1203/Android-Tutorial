@@ -2,5 +2,14 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$/.." vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/7MinutesWorkoutApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CloudPoint" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DigiManager" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Happy-place-App" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/KidsDrawHub" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/MyQuizApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/OnliLib" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/SharedPrefKotlin" vcs="Git" />
   </component>
 </project>
