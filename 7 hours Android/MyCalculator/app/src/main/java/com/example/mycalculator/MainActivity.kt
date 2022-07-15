@@ -10,6 +10,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+    
+    //Finally did this
 
     fun onDigit(view: View){
         Toast.makeText(this,"Button works",Toast.LENGTH_SHORT).show()
